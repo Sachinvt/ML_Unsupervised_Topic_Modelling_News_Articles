@@ -1,2 +1,13 @@
 # ML_Unsupervised_Topic_Modelling_News_Articles
-Topic Modelling On News Articles_Unsupervised ML
+# Project Summary -
+The project focuses on the BBC News dataset, containing news articles from 2004-2005 across five categories: Business, Entertainment, Politics, Sport, and Tech. The primary goal is to perform topic modeling to uncover latent themes and topics within the dataset. Two common topic modeling algorithms, Latent Dirichlet Allocation (LDA) and Latent Semantic Analysis (LSA), are employed for this purpose.
+
+Initially, the dataset is consolidated into a DataFrame with columns for the article's Title, Description, and Category. The Description column undergoes pre-processing, including contraction expansion, punctuation and digit removal, whitespace cleanup, and stop word removal. Lemmatization is also applied to group words into their lemma forms. The pre-processed data is then vectorized using CountVectorizer from scikit-learn. LDA is used for topic modeling, with hyperparameter tuning to identify the underlying topics in the dataset.
+
+Additionally, the LDA model is re-applied using TfidfVectorizer for vectorization to compare accuracy. The project establishes a null hypothesis that CountVectorizer provides more accurate results for the LDA model than TfidfVectorizer. Furthermore, an LSA model is applied to tokenized inputs using both CountVectorizer and TfidfVectorizer. LSA leverages truncated singular value decomposition (SVD) to reduce dimensionality and create a topic-term matrix, representing term weights within topics.
+
+After identifying latent topics, the models are evaluated by comparing them to the original article categories using metrics such as Accuracy, individual topic precision, recall, and F1 scores. Word clouds are generated for each topic to visualize the most frequent words in each topic and assess their relevance.
+
+The evaluation reveals that the LDA model with CountVectorizer achieves the highest accuracy, approximately 93%. The F1 score is highest for Sport (97%) and lowest for Politics (around 90%). The LDA model with TfidfVectorizer has lower accuracy, potentially due to an over-determination of the Entertainment topic, resulting in low precision. The LSA model exhibits significantly lower accuracy, largely due to over-determination of one topic.
+
+For future work, the project suggests refining stop word removal to further reduce dimensionality and tuning additional hyperparameters to enhance model performance. It also mentions the possibility of exploring other topic modeling algorithms and investigating topic evolution. This summary encapsulates the key aspects and findings of the project, emphasizing the choice of topic modeling algorithms, data preprocessing, model evaluation, and directions for future research.
