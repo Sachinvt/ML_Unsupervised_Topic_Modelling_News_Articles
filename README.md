@@ -1,4 +1,6 @@
 # ML_Unsupervised_Topic_Modelling_News_Articles
+![image](https://github.com/Sachinvt/ML_Unsupervised_Topic_Modelling_News_Articles/assets/140580938/5ea9c55f-c489-4d21-998c-01d852d30005)
+
 # Project Summary -
 The project focuses on the BBC News dataset, containing news articles from 2004-2005 across five categories: Business, Entertainment, Politics, Sport, and Tech. The primary goal is to perform topic modeling to uncover latent themes and topics within the dataset. Two common topic modeling algorithms, Latent Dirichlet Allocation (LDA) and Latent Semantic Analysis (LSA), are employed for this purpose.
 
